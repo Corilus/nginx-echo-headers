@@ -7,6 +7,7 @@ RUN \
 
 EXPOSE 8080
 ADD nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
+ADD src/lua /usr/local/openresty/nginx/conf/lua
 
 RUN chgrp -R 1000 /usr/local/openresty/nginx/ && \
     chmod -R g=u /usr/local/openresty/nginx/
